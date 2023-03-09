@@ -4,9 +4,12 @@ My undergraduate thesis in 2022 at Shanghai University
 ## Introduction
 Grammatical Error Correction (GEC) is an important Natural Language Processing task, which aims to detect and correct errors in text, such as spelling, grammar and punctuation. 
 
-English GEC techniques started early in the 1960s. It mainly focuses on words, and errors can be divided into two categories: first, 
+English GEC techniques started early in the 1960s and developed rapidly. It mainly focuses on words. There are two main types of error:
 - Non-word error. The word does not exist, for example, "bag" is misspelled as "bga". 
 - Real word error. The word exists but does not fit the context, for example, 'bag' is misspelled as 'bad'. Real word error is a contextual error related to grammar and semantics, and is a major challenge in text correction. 
+
+The development of Chinese GEC techniques is relatively late beginning in the early 1990s. The characteristics of Chinese make the GEC task more difficult than that of English: The grammatical semantics of Chinese are more flexible and difficult to define by rules; There are no separators between Chinese words and an automatic word separation process must be defined; Wrong words may affect the effect of word separation, further increasing the difficulty. 
+
 
 This project studies Chinese GEC algorithms and develops a Text Error Correction System.
 
