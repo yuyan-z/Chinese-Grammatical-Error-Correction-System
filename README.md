@@ -10,6 +10,3 @@ My undergraduate thesis in 2022 at Shanghai University
 Error correction knowledge base and confusion dictionary
 ![纠错知识库](https://user-images.githubusercontent.com/64955334/223094108-7ffdd162-90e5-424d-8e6c-af96758548cc.png)
 
-Model design
-![guize-第 5 页 drawio](https://user-images.githubusercontent.com/64955334/223094458-dc152f12-c4e1-47ef-ad60-939796ee0fac.png)
-
