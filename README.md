@@ -12,7 +12,7 @@ This project studies Chinese GEC algorithms and develops a Text Error Correction
 
 ## Methodology
 There are four main methods of Chinese GEC in common use.
-- Rule and 
+- Rules and correcting knowledge set
 - Statistical language model
 - Deep learning model
 - Hybrid model
