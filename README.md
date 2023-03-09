@@ -17,9 +17,12 @@ There are four main methods of Chinese GEC in common use.
 - Deep learning model
 - Hybrid model
 
+## Results
+![results](https://user-images.githubusercontent.com/64955334/223989361-34db28b6-3396-46d0-9c6c-10a89bd8bf64.png)
+
+
 ## Web Application
 Program Design
-
 ![design](https://user-images.githubusercontent.com/64955334/223971090-5b9d7060-4797-4bea-9d86-557f2a5223f9.jpg)
 
 Text error correction web app 
