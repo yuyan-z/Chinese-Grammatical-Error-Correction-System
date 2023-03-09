@@ -8,7 +8,10 @@ English GEC techniques started early in the 1960s and developed rapidly. It main
 
 The development of Chinese GEC techniques is relatively late beginning in the early 1990s. The characteristics of Chinese make the GEC task more difficult than that of English: The grammatical semantics of Chinese are more flexible and difficult to define by rules; There are no separators between Chinese words and an automatic word separation process must be defined; Errors may affect the effect of word separation, further increasing the difficulty. It is therefore mainly focused on contextual errors, such as redundant words, missing words and wrong words.
 
-This project studies Chinese GEC algorithms and develops a Text Error Correction System.
+This project studies Chinese GEC algorithms and develops a Text Error Correction System. The main tasks are as follows:
+- Construction of correcting knowledge set: build a crawler to collect 165,000 items of text from gov.cn with Scrapy.
+- Comparison and evaluation of different grammatical error correction models based on rule, N-gram, and BERT
+- Hosted models on the website with Flask and developed a web application with Bootstrap4
 
 ## Methodology
 There are four main methods of Chinese GEC in common use.
