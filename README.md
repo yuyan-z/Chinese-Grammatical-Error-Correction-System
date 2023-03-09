@@ -1,7 +1,10 @@
 # Chinese-Grammatical-Error-Correction-System
 My undergraduate thesis in 2022 at Shanghai University
 
-## Program design
+## Introduction
+Grammatical Error Correction (GEC) is an important Natural Language Processing task, which aims to detect and correct errors in text, such as spelling, grammar and punctuation. This project studies Chinese GEC algorithms and develops a Text Error Correction System.
+
+## Program Design
 ![design](https://user-images.githubusercontent.com/64955334/223971090-5b9d7060-4797-4bea-9d86-557f2a5223f9.jpg)
 
 ## Web Application
