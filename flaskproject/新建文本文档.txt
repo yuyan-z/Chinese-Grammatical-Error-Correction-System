@@ -1,0 +1,15 @@
+                    <div contenteditable="true" id="div_content">{{ file1 | safe }}</div>
+                    <textarea name="text1" class="form-control" rows="5" style="width: 40em;" ></textarea>
+                    <textarea name='text2' class="form-control" rows="5" style="width: 40em;" disabled >{{ file2 }}</textarea>
+
+
+
+        <script>
+            function checkForm()
+            {
+                var inputs1 = document.getElementById("inputs1");
+                document.getElementById("text1").value = inputs1;
+                console.log("你好")
+                return true;
+            }
+        </script>

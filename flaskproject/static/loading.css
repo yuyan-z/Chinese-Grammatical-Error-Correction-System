@@ -1,0 +1,37 @@
+/* -----------------------------------------
+  =Default css to make the demo more pretty
+-------------------------------------------- */
+.load-wrapp
+{
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    justify-content: center;    /*水平居中*/
+    align-items: center;    /*垂直居中*/
+    position:absolute;
+    opacity:70%;
+    display: none;
+    z-index: 1;
+}
+
+
+.line {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #000000;
+}
+
+.load .line:nth-last-child(1) {animation: loading .6s .1s linear infinite;}
+.load .line:nth-last-child(2) {animation: loading .6s .2s linear infinite;}
+.load .line:nth-last-child(3) {animation: loading .6s .3s linear infinite;}
+
+@keyframes loading
+{
+    0 {transform: translate(0,0);}
+    25% {transform: translate(0,-6px);}
+    50% {transform: translate(0,0);}
+    75% {transform: translate(0,6px);}
+    100% {transform: translate(0,0);}
+}

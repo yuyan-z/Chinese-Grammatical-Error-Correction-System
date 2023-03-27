@@ -1,0 +1,83 @@
+/* Fill viewport, hide scroll bar */
+html, body
+{
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Ensure content is below navbar */
+div.container-fluid
+{
+    padding-top: 56px;
+}
+
+/* Fill viewport */
+div.row, div.col, div.jumbotron
+{
+    height: 100%;
+}
+
+/* Remove padding within column */
+div.col
+{
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 0;
+}
+
+
+/* Add padding around form */
+form
+{
+    padding: 15px;
+    overflow: hidden;
+}
+
+div.input-group
+{
+    display: flex;
+    justify-content: center;    /*水平居中*/
+}
+
+div.form-control
+{
+    height: auto;
+    min-height: 400px;
+    width: 49em;
+    min-width: auto;
+}
+
+/* 保留空格和换行符 */
+pre
+{
+    white-space: pre-wrap;
+    padding: 8px;
+}
+
+/* 高亮显示 */
+span
+{
+    background-color: #ff0;
+}
+
+table
+{
+
+}
+
+tbody
+{
+   counter-reset:sectioncounter;
+}
+
+.sort:before
+{
+   content:counter(sectioncounter);
+   counter-increment:sectioncounter;
+}
+
+
+

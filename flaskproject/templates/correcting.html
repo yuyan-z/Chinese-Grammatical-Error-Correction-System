@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+    <div class="col">
+        <form action="/correcting" enctype="multipart/form-data" method="post">
+            <div class="m-3">
+                <h5 class="">请输入文本或选择txt文件：</h5>
+                <input type="file" name="file1" class="" >
+
+
+                <div class="input-group mt-3">
+                    <div class="form-control" contenteditable="true" id="inputs1">{{ file1 | safe }}</div>
+                    <div class="form-control" contenteditable="true" id="inputs2">{{ file2 | safe }}</div>
+                </div>
+
+            </div>
+
+
+            <div class="mt-5 m-3">
+                <label for="algorithm">纠错算法：</label>
+                <select name="algorithm" id="algorithm" style="width: 16em;">
+                    <option value="lm">规则和统计语言模型</option>
+                    <option value="macbert">MacBERT</option>
+                    <option selected value="lm_macbert">规则和统计语言模型+MacBert</option>
+                </select>
+            </div>
+
+            <div class="mt-5 m-3">
+                <input type="submit" style="width: 10em;">
+            </div>
+
+
+                <!-- TODO -->
+
+        </form>
+    </div>
+
+
+
+{% endblock %}

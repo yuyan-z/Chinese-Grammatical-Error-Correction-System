@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+    <ul class="navbar-nav">
+        <a class="navbar-brand" href="/">中文文本纠错系统</a>
+        <li class="nav-item active">
+            <a class="nav-link" href="/">首页</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="setting">历史记录</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="setting">设置</a>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="load-wrapp" id="load-wrapp">
+    <label for="load-wrapp">正在纠错中</label>
+    <div class="load">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</div>
+
+<div class="col" id="col">
+    <form action="/correcting" enctype="multipart/form-data" method="post" onsubmit='return checkForm()'>
+
+        <div class="mt-4 ml-4">
+            <h5 class="">请输入文本或选择txt文件：</h5>
+            <input type="file" name="file1">
+
+            <label for="algorithm">纠错算法：</label>
+            <select name="algorithm" id="algorithm" style="width: 16em;">
+                <option value="lm">规则和统计语言模型</option>
+                <option selected value="macbert">MacBERT</option>
+                <option value="lm_macbert">规则和统计语言模型+MacBert</option>
+            </select>
+        </div>
+
+        <center><button type='submit' class="btn btn-dark btn-large form-inline" style="width: 16em;">纠错</button></center>
+
+        <div class="input-group">
+            <pre>
+                <div class="form-control" contenteditable="true" id="inputs1">{{ file1 | safe }}</div>
+                <input type="hidden" name="text1" id="text1" value=""/>
+            </pre>
+            <pre>
+                <div class="form-control" contenteditable="false" id="inputs2">{{ file2 | safe }}</div>
+            </pre>
+        </div>
+
+    </form>
+</div>
+
+
+<script>
+    function checkForm()
+    {
+        var inputs1 = $("#inputs1").text();
+        document.getElementById("text1").value = inputs1;
+        var load = document.getElementById('load-wrapp')
+        load.style.display = "flex";
+        return true;
+    }
+</script>
+
+{% endblock %}

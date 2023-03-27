@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+    <ul class="navbar-nav">
+        <a class="navbar-brand" href="/">中文文本纠错系统</a>
+        <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="setting">历史记录</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="setting">设置</a>
+        </li>
+    </ul>
+</nav>
+
+    <table class="table table-hover table-bordered" id="confusion_dic">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">易错</th>
+                <th scope="col">纠正</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for confusion in confusion_lst %}
+            <tr>
+                <td class="sort"></td>
+                <td>{{confusion[0]}}</td>
+                <td>{{confusion[1]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
